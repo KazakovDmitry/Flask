@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -62,6 +64,28 @@ def students():
             'rating': 5
         }]
     return render_template('index.html', **head, students_list=students_list)
+
+
+@app.route('/news/')
+def news():
+
+    news_block = [
+        {
+            'title': "Новость 1",
+            'description': "описание 1",
+            'create_at': datetime.now().strftime('%H:%M - %m.%d.%Y года')
+        },
+        {
+            'title': "Новость 2",
+            'description': "описание 2",
+            'create_at': datetime.now().strftime('%H:%M - %m.%d.%Y года')
+        },
+        {
+            'title': "Новость 3",
+            'description': "описание 3",
+            'create_at': datetime.now().strftime('%H:%M - %m.%d.%Y года')
+        }]
+    return render_template('news.html', news_block=news_block)
 
 
 if __name__ == '__main__':
