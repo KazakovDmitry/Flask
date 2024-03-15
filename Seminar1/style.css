@@ -1,0 +1,22 @@
+body {
+    background-color: yellow;
+}
+
+p {
+    color: red;
+    font-family: “Times New Roman”
+}
+
+.blue {
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    padding: 20px;
+    color: aliceblue;
+}
+
+#green {
+    width: 200px;
+    height: 200px;
+    background-color: #186318;
+}
