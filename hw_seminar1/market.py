@@ -7,6 +7,13 @@ app = Flask(__name__)
 def base():
     return render_template('base.html')
 
+# @app.route('/')
+# def index():
+#     context = {
+#         'title': 'Главная',
+#     }
+#     return render_template('base.html', **context)
+
 
 @app.route('/clothes/')
 def clothes():
